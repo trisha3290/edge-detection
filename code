@@ -12,5 +12,4 @@ def My_edge_filter(img,sigma):
     sobelcombined=cv2.bitwise_or(sobelX,sobelY)
     New_image=cv2.bitwise_or(gblur,sobelcombined)
     return sobelcombined
-cv2.imshow('image',My_edge_filter(img,1))
-cv2.waitKey(500000)
+cv2.imwrite('edge_detected.jpg',My_edge_filter(img,1))
